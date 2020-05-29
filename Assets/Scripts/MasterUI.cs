@@ -13,6 +13,12 @@ public class MasterUI : MonoBehaviour
         scene = SceneManager.GetActiveScene();
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+            QuitGame();
+    }
+
     public void NextScene()
     {
         SceneManager.LoadScene(scene.buildIndex + 1);
